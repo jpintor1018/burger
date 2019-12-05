@@ -9,7 +9,7 @@ const orm = {
         })
     },
     insertOne: function(val, cb) {
-        let queryString = "INSERT INTO burgers(burger_name) VALUES (" + "'" + val + "'" + ")"
+        let queryString = "INSERT INTO burgers (burger_name) VALUES (" + "'" + val + "'" + ")"
         connection.query(queryString, (err, data) => {
             if (err) throw err
             cb(data)
