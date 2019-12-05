@@ -8,7 +8,7 @@
                 <form class="create-form">
                     <span class="form-group">
                         <label>Place Order Here:</label>
-                        <input type="text" id="newBurger" name="name">
+                        <input type="text" id="ca" name="name">
                     </span>
                         <button type="submit">Nice Buns</button>
                 </form>
@@ -27,7 +27,7 @@
         <ul>
         {{#each burgers}}
             {{#unless devoured}}
-            {{>burger/burger-block devoured=true}}
+            {{>burger/burger-block devoured=false}}
             {{/unless}}
             {{/each}}
         </ul>
@@ -37,7 +37,7 @@
         <h1>Devoured Burgers</h1>
         {{#each burgers}}
             {{#if devoured}}
-               {{>burger/burger-block devoured=false}}
+               {{>burger/burger-block devoured=true}}
             {{/if}}
         {{/each}}
     
