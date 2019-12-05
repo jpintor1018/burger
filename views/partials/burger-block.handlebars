@@ -1,7 +1,10 @@
-<li>
-	<h4>{{burger_name}}</h4>
+<li >
 
+	{{#unless devourd}}
 	<button class="change-burger" data-id="{{id}}" data-newBurger="{{devoured}}">
-		{{#if devoured}}Devour it{{/if}}
+		Devour it
 	</button>
+	{{/unless}}
+
+	{{burger_name}}
 </li>
